@@ -1,2 +1,2 @@
-# desktop
+# Powerstrip
 desktop application
