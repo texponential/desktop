@@ -1,0 +1,50 @@
+{
+	"name": "Powerstrip",
+	"version": "0.0.0",
+	"main": "main.js",
+	"description": "platform for lab analysis software tools",
+	"license": "SEE LICENSE IN LICENSE.TODO",
+	"domain": "powerstrip.texponential.com",
+	"window": {
+		"id": "powerstrip",
+		"title": "Powerstrip",
+		"width": 1024,
+		"height": 768,
+		"toolbar": true,
+		"//position": "center",
+		"min_width": 300,
+		"min_height": 300
+	},
+	"webkit": {
+		"plugin": false,
+		"double_tap_to_zoom_enabled": false
+	},
+	"user-agent": "Mozilla/5.0 (%osinfo) %name/%ver NW.js/%nwver Blink/%webkit_ver Chromium/%chromium_ver",
+	"//node-remote": "<all_urls>",
+	"node-remote": [
+		"http://localhost:5000/*",
+		"http://localhost:5001/*",
+		"https://cdn.firebase.com/*",
+		"https://txp-powerstrip.firebaseapp.com/*",
+		"https://securetoken.googleapis.com/*",
+		"https://www.googleapis.com/*",
+		"https://www.gstatic.com/*",
+		"https://apis.google.com/*",
+		"https://*.texponential.com/*"
+	],
+	"dependencies": {
+		"tedious": "^6.4.0"
+	},
+	"build": {
+		"nwVersion": "0.41.2"
+	},
+	"scripts": {
+		"dist": "build --tasks win-x86,win-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
+		"start": "run --x86 --mirror https://dl.nwjs.io/ .",
+		"postinstall": "npm dedupe",
+		"dev": "node --inspect app/server.js"
+	},
+	"env": {
+		"TXPPOWERSTRIP": "0.0.0"
+	}
+}

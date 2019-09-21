@@ -1,0 +1,6 @@
+**/*.zip
+powerstrip-mac/**
+powerstrip-macos/**
+powerstrip-win/**
+powerstrip-win32/**
+powerstrip-win64/**
