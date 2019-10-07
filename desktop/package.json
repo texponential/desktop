@@ -33,6 +33,7 @@
 		"https://*.texponential.com/*"
 	],
 	"dependencies": {
+		"odbc": "^2.2.1",
 		"tedious": "^6.4.0"
 	},
 	"build": {

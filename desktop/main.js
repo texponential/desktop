@@ -1,8 +1,10 @@
 global.msg = [];
 try{
 	const tedious = require('tedious');
+	const odbc = require('odbc');
 	Object.defineProperties(global, {
-		tedious: {value: tedious}
+		 tedious: {value: tedious}
+		,odbc: {value: odbc}
 	});
 }catch(err){
 	global.msg.push(err);
